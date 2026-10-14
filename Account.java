@@ -23,7 +23,7 @@ public class Account {
     }
 
     public boolean withdraw(double amount) {
-        if (amount >= this.balance && amount <= 0) {
+        if (amount > 0 && amount <= balance) {
             System.out.println("The withdraw amount must be less or equal to the balance");
             return false;
         } else if (amount <= this.balance) {
